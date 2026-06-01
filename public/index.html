@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>赤坂スペース予約</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>赤坂スペース予約</h1>
+    <div class="nav">
+      <button id="prevWeek">&#9664; 前の週</button>
+      <span id="weekLabel"></span>
+      <button id="nextWeek">次の週 &#9654;</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="calendar"></div>
+    <div id="legend"></div>
+  </main>
+
+  <footer>
+    <p>予約はLINE Botへ送信してください</p>
+    <p class="hint">例: 6/2 15:00-17:00 ／ 「確認」で一覧 ／ 「ヘルプ」で使い方</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
