@@ -119,8 +119,12 @@ function buildCalendar(weekSunday, reservations) {
     const endH = e.getUTCHours();
     const endM = e.getUTCMinutes();
 
+    // 終了が深夜0時（翌日00:00）の場合はHOUR_ENDまで表示
+    const calcEndH = (endH === 0 && endM === 0) ? HOUR_END : endH;
+    const calcEndM = (endH === 0 && endM === 0) ? 0 : endM;
+
     const topPx = (startH - HOUR_START) * HOUR_HEIGHT + (startM / 60) * HOUR_HEIGHT;
-    const heightPx = ((endH - startH) * 60 + (endM - startM)) / 60 * HOUR_HEIGHT;
+    const heightPx = ((calcEndH - startH) * 60 + (calcEndM - startM)) / 60 * HOUR_HEIGHT;
 
     if (topPx < 0 || heightPx <= 0) return;
 
