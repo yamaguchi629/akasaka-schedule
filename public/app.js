@@ -302,5 +302,3 @@ function showEditModal(r) {
 // 初期表示
 renderWeek(currentAnchor);
 
-// 5分ごとに自動更新
-setInterval(() => renderWeek(currentAnchor), 5 * 60 * 1000);
